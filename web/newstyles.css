@@ -1,0 +1,43 @@
+#panel-section {
+  background-color: #212121;
+  color: #878d8d;
+}
+
+.wrapper {
+  margin-top: 56px;
+}
+
+.sideMenu {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: 56px auto auto;
+  width: 200px;
+  border: 1px solid red;
+  transition: all ease 0.5s;
+  transform: translateX(-100%);
+  z-index: 2000;
+}
+.content {
+  width: 100%;
+  margin-left: 0px;
+  transition: all ease 0.5s;
+}
+
+@media (min-width: 992px) {
+  .wrapper .sideMenu {
+    transform: translateX(0);
+  }
+  .wrapper .content {
+    margin-left: 200px;
+  }
+  .wrapper .active {
+    width: 80px;
+  }
+
+  .wrapper .active .content {
+    margin-left: 80px;
+  }
+}
